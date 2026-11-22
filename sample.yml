@@ -4,3 +4,8 @@
     - name: printing hello
       ansible.builtin.debug:
         msg: " Hello universe"
+
+    - name: Create a file
+      ansible.builtin.file:
+        dest: /tmp/demo.txt
+        state: touch
