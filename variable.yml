@@ -29,7 +29,7 @@
 - name: Declare variable at file level
   hosts: all
   become: yes
-  var_files:
+  vars_files:
     - var.yml
   tasks:
     - name: Declare variable at file level
