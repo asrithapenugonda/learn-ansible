@@ -25,3 +25,14 @@
       ansible.builtin.debug:
         msg: URL is {{URL}}
 
+
+- name: Declare variable at file level
+  hosts: all
+  become: yes
+  var_files:
+    - var.yml
+  tasks:
+    - name: Declare variable at file level
+      ansible.builtin.debug:
+        msg: URL is {{URL}}
+
