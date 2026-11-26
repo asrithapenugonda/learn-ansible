@@ -13,3 +13,15 @@
         URL: task.example.com
       ansible.builtin.debug:
         msg: URL == {{URL}}
+
+---
+- name: Declare variable at task level
+  hosts: all
+  become: yes
+  tasks:
+    - name: Declare variable at task level
+      vars:
+        URL: task1.example.com
+      ansible.builtin.debug:
+        msg: URL is {{URL}}
+
